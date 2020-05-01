@@ -7,6 +7,10 @@ This was an experiment (a one day thing) and a little entertainment (not intende
 Based on the columns from the xlsx would be pretty easy to add several filters in order to download with specific chriteria,
 if someone wants to play with it and collaborate, feel free.
 
+Requirements:
+- python 3
+- modules: BeautifulSoup, pandas, numpy, argparse
+
 Usage:
 - '-f', '--folder' -> Folder to store the books.
 - '-PDF' -> Download PDF format.
