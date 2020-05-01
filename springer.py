@@ -23,16 +23,19 @@ def extract_books_links_and_download(url, name, folder, formatos):
     print("Trying to download: " + name)
     for formato in formatos:
         try:
-            attrs = attrs_for_format(formato)
-            links = soup.find_all("a", attrs=attrs)
-            linkRel = links[0].get('href')
-            link = "https://link.springer.com" + linkRel
-            print("Link for " + formato + " found: "+ link)
-            saveLinkToFile("urls_for_download1.txt", link)
             bookName = createName(name, formato)
             path = os.path.join(folder, bookName)
-            print("saving book to: " + path)
-            urllib.request.urlretrieve(link, path)
+            if os.path.exists(path):
+                print("Already downloaded")
+            else:
+                attrs = attrs_for_format(formato)
+                links = soup.find_all("a", attrs=attrs)
+                linkRel = links[0].get('href')
+                link = "https://link.springer.com" + linkRel
+                print("Link for " + formato + " found: "+ link)
+                saveLinkToFile("urls_for_download1.txt", link)
+                print("saving book to: " + path)
+                urllib.request.urlretrieve(link, path)
         except:
             print("Not able to download " + formato + " version")
 
