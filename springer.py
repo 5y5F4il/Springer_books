@@ -1,8 +1,5 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-import webbrowser
-import datetime
-import time
 from bs4 import BeautifulSoup
 import webbrowser
 import urllib.request
