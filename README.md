@@ -8,6 +8,6 @@ Based on the columns from the xlsx would be pretty easy to add several filters i
 if someone wants to play with it and collaborate, feel free.
 
 Usage:
-'-f', '--folder' -> Folder to store the books.
-'-PDF' -> Download PDF format.
-'-EPUB' -> Download EPUB format.
+- '-f', '--folder' -> Folder to store the books.
+- '-PDF' -> Download PDF format.
+- '-EPUB' -> Download EPUB format.
