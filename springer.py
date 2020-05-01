@@ -33,7 +33,6 @@ def extract_books_links_and_download(url, name, folder, formatos):
                 linkRel = links[0].get('href')
                 link = "https://link.springer.com" + linkRel
                 print("Link for " + formato + " found: "+ link)
-                saveLinkToFile("urls_for_download1.txt", link)
                 print("saving book to: " + path)
                 urllib.request.urlretrieve(link, path)
         except:
@@ -51,11 +50,6 @@ def attrs_for_format(format):
 def createName(name, formato):
     new_name = name.replace(":", "").replace("\\", "") + "." + formato
     return new_name
-
-
-def saveLinkToFile(urls_file, link):
-    with open(urls_file, "a") as urls_to_download:
-        urls_to_download.write(link + "\n")
 
 
 books_list = "Free+English+textbooks.xlsx"
