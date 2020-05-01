@@ -19,7 +19,8 @@ def extract_books_links_and_download(url, name, folder, formatos):
 
     pag = response.read()
     soup = BeautifulSoup(pag, 'html.parser')
- 
+    
+    print("Trying to download: " + name)
     for formato in formatos:
         try:
             attrs = attrs_for_format(formato)
