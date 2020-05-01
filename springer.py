@@ -12,8 +12,6 @@ import requests
 
 formatos = []
 
-string0 = "https://link.springer.com/book/10.1007%2F978-1-4939-9621-6"
-
 def extract_books_links_and_download(url, name, folder, formatos):
     opener = urllib.request.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0')]
